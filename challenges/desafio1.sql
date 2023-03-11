@@ -3,9 +3,8 @@
 DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
 CREATE TABLE SpotifyClone.artista (
-  id INT NOT NULL AUTO_INCREMENT,
-  nome VARCHAR(255) NOT NULL,
-  PRIMARY KEY (id)
+  artista_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL
 ) engine = InnoDB;
 CREATE TABLE SpotifyClone.plano(
   plano_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -80,11 +79,11 @@ VALUES
   ('Renaissance', 1, 2022),
   ('Jazz', 2, 1978),
   ('Hot Space', 2, 1982),
-  ('Falso Brilhante', 4, 1998),
-  ('Vento de Maio', 4, 2001),
-  ('QVVJFA?', 5, 2003),
-  ('Somewhere Far Beyond', 6, 2007),
-  ('I Put A Spell On You', 7, 2012);
+  ('Falso Brilhante', 3, 1998),
+  ('Vento de Maio', 3, 2001),
+  ('QVVJFA?', 4, 2003),
+  ('Somewhere Far Beyond', 5, 2007),
+  ('I Put A Spell On You', 6, 2012);
 INSERT INTO SpotifyClone.cancao (album_id, nome_cancao, duracao_segundos)
 VALUES 
   (1, 'BREAK MY SOUL', 279),
